@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 
 const connect = handle =>
 	rl.on('line', line => {
-		handle(() => line, {
+		handle(() => line.trim(), {
 			sessionCloser: () => rl.close(),
 		});
 	});
