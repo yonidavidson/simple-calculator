@@ -1,7 +1,7 @@
-const handler = (line,{sessionCloser}) => () => {
+const handler = (line, { sessionCleaner }) => () => {
 	const str = line();
-	if (str.length == 0){
-		console.log(true);
+	if (str.length == 0) {
+		sessionCleaner();
 	}
 };
 

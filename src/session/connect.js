@@ -7,8 +7,9 @@ const rl = readline.createInterface({
 
 const connect = handle =>
 	rl.on('line', line => {
-		handle(() => line.trim(), {
+		handle(() => line.replace(/\s/g, '') , {
 			sessionCloser: () => rl.close(),
+			sessionCleaner: () => console.log('end of session'),
 		});
 	});
 
