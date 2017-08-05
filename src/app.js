@@ -1,5 +1,5 @@
 import userInterface from './userInterface';
-import handler from './handlers';
+import handler from './handler';
 
 console.log('welcome to my calculator');
 

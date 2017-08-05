@@ -1,2 +1,2 @@
-# functional-calculator
-A simple calculator written in javascript using functional programming.
+# simple alculator
+A simple calculator written in javascript using some functional programming.
