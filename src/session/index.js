@@ -1,14 +1,4 @@
-import readline from 'readline';
+import connect from './connect';
 
-export default (handler, getMessage) => () => {
-	const rl = readline.createInterface({
-		input: process.stdin,
-		output: process.stdout,
-	});
-
-	const sessionCloser = () => rl.close();
-
-	rl.on('line', line => {
-		handler(sessionCloser, () => line);
-	});
-};
+const session = handler => () => connect(handler);
+export default session;
