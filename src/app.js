@@ -1,15 +1,8 @@
-const readline = require('readline');
+import userInterface from './userInterface';
+import handler from './handlers';
 
-export default () => {
-	const rl = readline.createInterface({
-		input: process.stdin,
-		output: process.stdout,
-	});
+console.log('welcome to my calculator');
 
-	rl.question('What do you think of Node.js? ', answer => {
-		// TODO: Log the answer in a database
-		console.log(`Thank you for your valuable feedback: ${answer}`);
+const app = userInterface(handler);
 
-		rl.close();
-	});
-};
+export default app;
