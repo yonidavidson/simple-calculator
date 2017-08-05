@@ -1,6 +1,6 @@
 import getHandlers from './handlers';
 
-const handler = (line, sessionCloser) =>
-	getHandlers(line, { sessionCloser }).forEach(x => x());
+const handler = (line, utils) =>
+	getHandlers(line, utils).forEach(x => x());
 
 export default handler;
