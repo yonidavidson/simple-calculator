@@ -1,3 +1,3 @@
-import fs from 'fs';
+import app from './src/app';
 
-console.log('works');
+app();
