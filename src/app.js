@@ -1,8 +1,8 @@
-import userInterface from './userInterface';
+import session from './session';
 import handler from './handler';
 
 console.log('welcome to my calculator');
 
-const app = userInterface(handler);
+const app = session(handler);
 
 export default app;
