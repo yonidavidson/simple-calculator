@@ -1,8 +1,6 @@
 import getHandlers from './handlers';
 
 const handler = (sessionCloser, line) =>
-	getHandlers().forEach(x => {
-		x(sessionCloser, line)();
-	});
+	getHandlers(line, { sessionCloser }).forEach(x => x());
 
 export default handler;
