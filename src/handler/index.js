@@ -1,6 +1,5 @@
-import getHandlers from './handlers';
+import action from './actions';
 
-const handler = (line, utils) =>
-	getHandlers(line, utils).forEach(x => x());
+const handler = input => action(input);
 
 export default handler;
