@@ -2,16 +2,20 @@ import uut from '../';
 import { getKey } from '../../db';
 
 describe('main handler - integration ', () => {
+	[
+		{ input: 'j =  987', key: 'j', expected: 987 },
+		{ input: 'k           =   988', key: 'k', expected: 988 },
+	].forEach(testCase => {
+		it('should put value in key when simple equality sign', () => {
+			const db = {};
+			const input = testCase.input;
+			const key = testCase.key;
+			const expected = testCase.expected;
 
-	
-	it('should put value in key when simple equality sign', () => {
-		const db = {};
-		const expected = 987;
-		const input = 'j =  987';
+			uut(input, db);
+			const result = getKey(key, db);
 
-		uut(input, db);
-		const result = getKey('j', db);
-
-		expect(result).toBe(expected);
+			expect(result).toBe(expected);
+		});
 	});
 });
