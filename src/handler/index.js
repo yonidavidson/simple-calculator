@@ -1,5 +1,5 @@
 import action from './actions';
 
-const handler = input => action(input);
+const handler = (input, db) => action(input, db);
 
 export default handler;
