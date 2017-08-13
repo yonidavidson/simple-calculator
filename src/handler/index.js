@@ -1,5 +1,5 @@
-import action from './actions';
+import post from './post';
 
-const handler = (input, db) => action(input, db);
+const handler = (input, db) => post(input, db);
 
 export default handler;

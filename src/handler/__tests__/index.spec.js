@@ -4,7 +4,7 @@ import { getKey } from '../../db';
 describe('main handler - integration ', () => {
 	[
 		{ input: 'j =  987', key: 'j', expected: 987 },
-		{ input: 'k           =   988', key: 'k', expected: 988 },
+		{ input: 'k  =   988', key: 'k', expected: 988 },
 	].forEach(testCase => {
 		it('should put value in key when simple equality sign', () => {
 			const db = {};
