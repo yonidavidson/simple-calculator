@@ -28,11 +28,16 @@ function handleVar(x, mem) {
 }
 
 function handleResevedKey(reservedKey, varName, mem) {
-	if (reservedKey === '#{++L}') {
-		const currentVal = mem.hasOwnProperty(varName) ? mem[varName] : 0;
-		mem[varName] = currentVal + 1;
-		return mem[varName];
-	}
-	return mem.hasOwnProperty(varName) ? mem[varName] : 0;
+	switch (reservedKey) {
+		case '#{++L}':
+			const currentVal = mem.hasOwnProperty(varName) ? mem[varName] : 0;
+			mem[varName] = currentVal + 1;
+			return mem[varName];
 
+		case '#{++R}':
+			return mem[varName] + 1;
+
+		default:
+			return mem.hasOwnProperty(varName) ? mem[varName] : 0;
+	}
 }
