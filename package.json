@@ -11,7 +11,11 @@
 		"type": "git",
 		"url": "git+https://github.com/yonidavidson/functional-calculator.git"
 	},
-	"keywords": ["functional", "javascript", "calculator"],
+	"keywords": [
+		"functional",
+		"javascript",
+		"calculator"
+	],
 	"author": "yoni davidson",
 	"license": "ISC",
 	"bugs": {
@@ -26,5 +30,8 @@
 		"jest": "^20.0.4",
 		"prettier": "^1.5.3"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"infix-to-postfix": "0.0.3",
+		"reverse-polish-notation": "^0.1.0"
+	}
 }

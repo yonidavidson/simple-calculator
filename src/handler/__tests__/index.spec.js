@@ -1,21 +1,21 @@
 import uut from '../';
-import { getKey } from '../../db';
 
-describe('main handler - integration ', () => {
+describe('preprocess tokens', () => {
 	[
-		{ input: 'j =  987', key: 'j', expected: 987 },
-		{ input: 'k  =   988', key: 'k', expected: 988 },
+		{ mem: {}, input: 'i = 0', expected: { i: 0 } },
+		{ mem: { i: 0 }, input: 'j = ++i', expected: { i: 1, j: 1 } },
 	].forEach(testCase => {
-		it('should put value in key when simple equality sign', () => {
-			const db = {};
-			const input = testCase.input;
-			const key = testCase.key;
-			const expected = testCase.expected;
+		it('should calculate correct value of param', () => {
+			const result = uut(testCase.input, testCase.mem);
 
-			uut(input, db);
-			const result = getKey(key, db);
-
-			expect(result).toBe(expected);
+			expect(result).toEqual(testCase.expected);
 		});
 	});
 });
+
+/* i = 0
+j = ++i
+x = i++ + 5
+y = 5 + 3 * 10
+i +=y
+i = 37, j = 1,x =6 ,y = 35 */

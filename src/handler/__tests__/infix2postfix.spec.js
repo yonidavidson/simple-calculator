@@ -1,14 +1,15 @@
-import uut from '../infix2postfix';
+import uut from 'infix-to-postfix';
 
 describe('preprocess tokens', () => {
 	[
 		{ input: '3 + 2 + 4', expected: '3 2 + 4 +' },
 		{ input: '3 * 2 +15', expected: '3 2 * 15 +' },
+		{ input: '123 + 422 * 54', expected: '123 422 + 54 *' },
 	].forEach(testCase => {
-		it('should tokenize the string', () => {
+		it('infix to postfix', () => {
 			const result = uut(testCase.input);
 
-			expect(result).toBe(testCase.expected);
+			expect(result).toEqual(testCase.expected);
 		});
 	});
 });
