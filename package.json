@@ -1,35 +1,30 @@
 {
-  "name": "functional-calculator",
-  "version": "1.0.0",
-  "description": "simple calculator written functional style",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "start": "babel-node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yonidavidson/functional-calculator.git"
-  },
-  "keywords": [
-    "functional",
-    "javascript",
-    "calculator"
-  ],
-  "author": "yoni davidson",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yonidavidson/functional-calculator/issues"
-  },
-  "homepage": "https://github.com/yonidavidson/functional-calculator#readme",
-  "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.24.1",
-    "babel-jest": "^20.0.3",
-    "babel-preset-env": "^1.6.0",
-    "jest": "^20.0.4",
-    "prettier": "^1.5.3"
-  },
-  "dependencies": {
-  }
+	"name": "functional-calculator",
+	"version": "1.0.0",
+	"description": "simple calculator written functional style",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"start": "babel-node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yonidavidson/functional-calculator.git"
+	},
+	"keywords": ["functional", "javascript", "calculator"],
+	"author": "yoni davidson",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/yonidavidson/functional-calculator/issues"
+	},
+	"homepage": "https://github.com/yonidavidson/functional-calculator#readme",
+	"devDependencies": {
+		"babel": "^6.23.0",
+		"babel-cli": "^6.24.1",
+		"babel-jest": "^20.0.3",
+		"babel-preset-env": "^1.6.0",
+		"jest": "^20.0.4",
+		"prettier": "^1.5.3"
+	},
+	"dependencies": {}
 }
