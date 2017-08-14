@@ -22,5 +22,17 @@ function isNumeric(num) {
 }
 
 function handleVar(x, mem) {
-	return mem.hasOwnProperty(x) ? mem[x] : 0;
+	const varName = x.match(/(#\{.*\})/) ? x.split('}')[1] : x;
+	const reservedKey = x.match(/(#\{.*\})/) ? x.split(varName)[0] : '';
+	return handleResevedKey(reservedKey, varName, mem);
+}
+
+function handleResevedKey(reservedKey, varName, mem) {
+	if (reservedKey === '#{++L}') {
+		const currentVal = mem.hasOwnProperty(varName) ? mem[varName] : 0;
+		mem[varName] = currentVal + 1;
+		return mem[varName];
+	}
+	return mem.hasOwnProperty(varName) ? mem[varName] : 0;
+
 }
