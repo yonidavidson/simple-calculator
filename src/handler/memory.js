@@ -30,12 +30,14 @@ function handleVar(x, mem) {
 function handleResevedKey(reservedKey, varName, mem) {
 	switch (reservedKey) {
 		case '#{++L}':
-			const currentVal = mem.hasOwnProperty(varName) ? mem[varName] : 0;
-			mem[varName] = currentVal + 1;
+			const lVal = mem.hasOwnProperty(varName) ? mem[varName] : 0;
+			mem[varName] = lVal + 1;
 			return mem[varName];
 
 		case '#{++R}':
-			return mem[varName] + 1;
+			const rVal = mem.hasOwnProperty(varName) ? mem[varName] : 0;
+			mem[varName] = rVal + 1;
+			return rVal;
 
 		default:
 			return mem.hasOwnProperty(varName) ? mem[varName] : 0;

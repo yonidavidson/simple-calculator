@@ -32,6 +32,7 @@
 	},
 	"dependencies": {
 		"infix-to-postfix": "0.0.3",
-		"reverse-polish-notation": "^0.1.0"
+		"reverse-polish-notation": "^0.1.0",
+		"shunting-yard": "^2.1.0"
 	}
 }

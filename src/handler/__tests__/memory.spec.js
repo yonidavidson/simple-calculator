@@ -9,14 +9,14 @@ describe('preprocess tokens', () => {
 			expected: { text: '0 + 2', mem: { c: 2 } },
 		},
 		{
-			mem: { j: 3 },
-			input: '2 + #{++L}j',
-			expected: { text: '2 + 4', mem: { j: 4 } },
+			mem: { h: 3 },
+			input: '2 + #{++L}h',
+			expected: { text: '2 + 4', mem: { h: 4 } },
 		},
 		{
 			mem: { j: 3 },
 			input: '2 + #{++R}j',
-			expected: { text: '2 + 4', mem: { j: 3 } },
+			expected: { text: '2 + 3', mem: { j: 4 } },
 		},
 	].forEach(testCase => {
 		it('should update memory and return only numbers and base operators', () => {
