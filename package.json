@@ -31,8 +31,6 @@
 		"prettier": "^1.5.3"
 	},
 	"dependencies": {
-		"infix-to-postfix": "0.0.3",
-		"reverse-polish-notation": "^0.1.0",
 		"shunting-yard": "^2.1.0"
 	}
 }
