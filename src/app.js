@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 console.log('welcome to my calculator');
-
-const app = () => rl.on('line', input => handler(input));
+const db = {};
+const app = () => rl.on('line', input => Object.assign(db, handler(input, db)));
 
 export default app;
