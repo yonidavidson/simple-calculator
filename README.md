@@ -1,2 +1,7 @@
 # simple alculator
-A simple calculator written in javascript using some functional programming.
+
+## testing 
+npm test
+
+## running
+npm start
